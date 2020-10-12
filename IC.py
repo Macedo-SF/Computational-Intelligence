@@ -364,6 +364,8 @@ rmseb3 =sqrt(mean_squared_error(yb3_test,diabetes_yb3_pred.reshape(-1,1)))
 slopeb3 = regrb3.coef_
 interceptb3 = regrb3.intercept_
 
+# not using due to having a need for 4d plotting
+"""
 # bmi, bp and s5
 
 Xbb5 = table[['bmi','bp','s5']]
@@ -409,7 +411,7 @@ print('BMI, s3 and s5: \nR2: ', scoreb35, '\nMean Absolute Error: ',
 myDistribution(Xb35, 'BMI, s3 and s5')
 myResiduals(yb35_test,diabetes_yb35_pred, 'BMI, s3 and s5')
 #
-
+"""
 # plotting ***************************************************************************************************
 
 # age
