@@ -6,6 +6,7 @@ from sklearn import linear_model
 from sklearn.datasets import load_diabetes
 from sklearn.metrics import mean_squared_error
 from mpl_toolkits.mplot3d import Axes3D
+#linha teste
 # Load the diabetes dataset
 diabetes = load_diabetes()
 # diabetes
@@ -226,6 +227,21 @@ maeb5 = sum(abs(yb5_teste - diabetes_yb5_pred.reshape(-1,1)))/yb5_teste.size
 rmseb5 =sqrt(mean_squared_error(yb5_teste,diabetes_yb5_pred.reshape(-1,1)))
 slopeb5 = regrb5.coef_
 interceptb5 = regrb5.intercept_
+# bmi and s3
+Xb3 = tabela[['bmi','s3']]
+Xb3_treinamento = Xb3[:-20].to_numpy().reshape(-1,2)
+Xb3_teste = Xb3[-20:].to_numpy().reshape(-1,2)
+yb3_treinamento = y[:-20]
+yb3_teste = y[-20:].to_numpy().reshape(-1,1)
+
+regrb3 = linear_model.LinearRegression()
+regrb3.fit(Xb3_treinamento, yb3_treinamento)
+diabetes_yb3_pred = regrb3.predict(Xb3_teste)
+scoreb3 = regrb3.score(Xb3_teste,yb3_teste)
+maeb3 = sum(abs(yb3_teste - diabetes_yb3_pred.reshape(-1,1)))/yb3_teste.size
+rmseb3 =sqrt(mean_squared_error(yb3_teste,diabetes_yb3_pred.reshape(-1,1)))
+slopeb3 = regrb3.coef_
+interceptb3 = regrb3.intercept_
 # bmi, bp and s5
 Xbb5 = tabela[['bmi','bp','s5']]
 Xbb5_treinamento = Xbb5[:-20].to_numpy().reshape(-1,3)
@@ -483,6 +499,52 @@ fig.suptitle('$R^2 = %.5f$' % scoreb5, fontsize=20)
 fig.tight_layout()
 print('\n\nBody Mass Index and s5: \nR2: ', scoreb5, '\nMean Absolute Error: ',
      maeb5,'\nRoot Mean Square Error: ', rmseb5)
+plt.show()
+# bmi and s3 3d plot
+
+x1=Xb3_teste[:, 0]
+y1=Xb3_teste[:, 1]
+z1=pd.Series(yb3_teste.flatten())
+x2, y2 =np.meshgrid(x1, y1)
+model_viz = np.array([x2.flatten(), y2.flatten()]).T
+predicted = regrb3.predict(model_viz)
+#usados na plotagem
+
+plt.style.use('default')
+
+fig = plt.figure(figsize=(12, 4))
+
+ax1 = fig.add_subplot(131, projection='3d')
+ax2 = fig.add_subplot(132, projection='3d')
+ax3 = fig.add_subplot(133, projection='3d')
+
+axes = [ax1, ax2, ax3]
+
+for ax in axes:
+    ax.plot(x1, y1, z1, color='k', zorder=15, linestyle='none', marker='o', alpha=0.5)
+    ax.scatter(x2, y2, predicted, facecolor=(0,0,0,0), s=20, edgecolor='#70b3f0')
+    ax.set_xlabel('Body Mass Index', fontsize=12)
+    ax.set_ylabel('s3', fontsize=12)
+    ax.set_zlabel('Diabetes', fontsize=12)
+    ax.locator_params(nbins=4, axis='x')
+    ax.locator_params(nbins=5, axis='x')
+
+ax1.text2D(0.2, 0.32, '', fontsize=13, ha='center', va='center',
+           transform=ax1.transAxes, color='grey', alpha=0.5)
+ax2.text2D(0.3, 0.42, '', fontsize=13, ha='center', va='center',
+           transform=ax2.transAxes, color='grey', alpha=0.5)
+ax3.text2D(0.85, 0.85, '', fontsize=13, ha='center', va='center',
+           transform=ax3.transAxes, color='grey', alpha=0.5)
+
+ax1.view_init(elev=28, azim=120)
+ax2.view_init(elev=4, azim=114)
+ax3.view_init(elev=60, azim=165)
+
+fig.suptitle('$R^2 = %.5f$' % scoreb5, fontsize=20)
+
+fig.tight_layout()
+print('\n\nBody Mass Index and s3: \nR2: ', scoreb3, '\nMean Absolute Error: ',
+     maeb3,'\nRoot Mean Square Error: ', rmseb3)
 plt.show()
 # fim plotagem ***********************************************************************************************
 
