@@ -412,6 +412,7 @@ myDistribution(Xb35, 'BMI, s3 and s5')
 myResiduals(yb35_test,diabetes_yb35_pred, 'BMI, s3 and s5')
 #
 """
+
 # plotting ***************************************************************************************************
 
 # age
