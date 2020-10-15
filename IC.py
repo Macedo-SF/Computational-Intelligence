@@ -8,6 +8,11 @@ from sklearn.metrics import mean_squared_error
 from mpl_toolkits.mplot3d import Axes3D
 from statsmodels.stats.diagnostic import normal_ad
 
+# fig directory
+# decided to save the figures instead of showing, comment plt.close() and uncomment plt.show() to switch
+
+my_path = 'C:/Users/Saulo/source/repos/IC' # set ur path in order to save the figures or do as stated above and use show()
+
 # testing functions
 
 def my3dPlot(x,y, model,score,mean,root,name1,name2):
@@ -54,9 +59,12 @@ def my3dPlot(x,y, model,score,mean,root,name1,name2):
     fig.tight_layout()
     print(name1+' and '+name2+': \nR2: ', score, '\nMean Absolute Error: ',
          mean,'\nRoot Mean Square Error: ', root)
-    plt.show()
+    fig.savefig(my_path+'/Figures/'+name1+'_'+name2+'_Graph'+'.png')
+    plt.close()
+    #plt.show()
 
 def my2dPlot(x,y,pred,name,score,mean,root):
+    fig = plt.figure()
     plt.scatter(x,y,  color='blue')
     plt.plot(x, pred, color='black', linewidth=3)
     plt.title(name+' vs Diabetes', fontsize=14)
@@ -64,42 +72,62 @@ def my2dPlot(x,y,pred,name,score,mean,root):
     plt.ylabel('Diabetes', fontsize=14)
     plt.grid(True)
     print(name+': \nR2: ', score, '\nMean Absolute Error: ', mean,'\nRoot Mean Square Error: ', root)
-    plt.show()
+    fig.savefig(my_path+'/Figures/'+name+'_Graph'+'.png')
+    plt.close()
+    #plt.show()
 
 def myResiduals2(y,pred,name1,name2):
     res = pd.Series(y.flatten()-pred)
     print('Anderson-Darling Normal: ',normal_ad(res)[1],'\n\n') # if < 0.05 -> bad
+    fig = plt.figure()
     plt.hist(res)
     plt.title(name1+' and '+name2+' Residuals')
-    plt.show()
+    fig.savefig(my_path+'/Figures/'+name1+'_'+name2+'_ResidualHistogram'+'.png')
+    plt.close()
+    #plt.show()
+    fig = plt.figure()
     plt.scatter(pred,res, color='green', s=50, alpha=.6)
     plt.hlines(y=0, xmin=min(pred), xmax=max(pred), color='black')
     plt.ylabel(name1+'and '+name2+' Residuals')
     plt.xlabel(name1+'and '+name2+' Prediction')
     plt.title ('Residuals vs Preditions ('+name1+' - '+name2+')')
-    plt.show()
+    fig.savefig(my_path+'/Figures/'+name1+'_'+name2+'_ResidualGraph'+'.png')
+    plt.close()
+    #plt.show()
 def myResiduals(y,pred,name):
     res = pd.Series(y.flatten()-pred)
     print('Anderson-Darling Normal: ',normal_ad(res)[1],'\n\n') # if < 0.05 -> bad
+    fig = plt.figure()
     plt.hist(res)
     plt.title(name+' Residuals')
-    plt.show()
+    fig.savefig(my_path+'/Figures/'+name+'_ResidualHistogram'+'.png')
+    plt.close()
+    #plt.show()
+    fig = plt.figure()
     plt.scatter(pred,res, color='green', s=50, alpha=.6)
     plt.hlines(y=0, xmin=min(pred), xmax=max(pred), color='black')
     plt.ylabel(name+' Residuals')
     plt.xlabel(name+' Prediction')
     plt.title ('Residuals vs Preditions ('+name+')')
-    plt.show()
+    fig.savefig(my_path+'/Figures/'+name+'_ResidualGraph'+'.png')
+    plt.close()
+    #plt.show()
 
 def myDistribution2(var,name1,name2):
+    fig = plt.figure()
     plt.hist(var)
     plt.title(name1+' and '+name2+' Distribution')
-    plt.show()
+    fig.savefig(my_path+'/Figures/'+name1+'_'+name2+'_Distribution'+'.png')
+    plt.close()
+    #plt.show()
 
 def myDistribution(var,name):
+    fig = plt.figure()
     plt.hist(var)
     plt.title(name+' Distribution')
-    plt.show()
+    fig.savefig(my_path+'/Figures/'+name+'_Distribution'+'.png')
+    plt.close()
+    #plt.show()
 
 # test end
 
@@ -110,6 +138,7 @@ table = pd.DataFrame(diabetes.data)
 table.columns = diabetes.feature_names
 table['y'] = diabetes.target
 y = table['y']
+#myDistribution(y,"y")
 #print(table.head()) # not enough space in screen to see all columns and lines
 #print(table.corr())
 # splice data
