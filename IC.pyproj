@@ -4,7 +4,8 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>f40c6051-456b-44fd-8ae3-127ffe24d13d</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>IC.py</StartupFile>
+    <StartupFile>
+    </StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -21,9 +22,6 @@
     <DebugSymbols>true</DebugSymbols>
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
-  <ItemGroup>
-    <Compile Include="IC.py" />
-  </ItemGroup>
   <ItemGroup>
     <Interpreter Include="env\">
       <Id>env</Id>

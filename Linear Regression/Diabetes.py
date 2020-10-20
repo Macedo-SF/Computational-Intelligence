@@ -11,7 +11,7 @@ from statsmodels.stats.diagnostic import normal_ad
 # fig directory
 # decided to save the figures instead of showing, comment plt.close() and uncomment plt.show() to switch
 
-my_path = 'C:/Users/Saulo/source/repos/IC' # set ur path in order to save the figures or do as stated above and use show()
+my_path = 'C:/Users/Saulo/source/repos/IC/Linear Regression' # set ur path in order to save the figures or do as stated above and use show()
 
 # testing functions
 
