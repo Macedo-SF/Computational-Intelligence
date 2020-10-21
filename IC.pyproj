@@ -4,8 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>f40c6051-456b-44fd-8ae3-127ffe24d13d</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>
-    </StartupFile>
+    <StartupFile>Classification\Flowers.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -32,6 +31,117 @@
       <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
       <Architecture>X64</Architecture>
     </Interpreter>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Linear Regression\" />
+    <Folder Include="Linear Regression\Figures\" />
+    <Folder Include="Classification\" />
+    <Folder Include="Classification\Figures\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Linear Regression\Figures\Age_Body Mass Index_Distribution.png" />
+    <Content Include="Linear Regression\Figures\Age_Body Mass Index_Graph.png" />
+    <Content Include="Linear Regression\Figures\Age_Body Mass Index_ResidualGraph.png" />
+    <Content Include="Linear Regression\Figures\Age_Body Mass Index_ResidualHistogram.png" />
+    <Content Include="Linear Regression\Figures\Age_Distribution.png" />
+    <Content Include="Linear Regression\Figures\Age_Graph.png" />
+    <Content Include="Linear Regression\Figures\Age_ResidualGraph.png" />
+    <Content Include="Linear Regression\Figures\Age_ResidualHistogram.png" />
+    <Content Include="Linear Regression\Figures\Blood Pressure_Distribution.png" />
+    <Content Include="Linear Regression\Figures\Blood Pressure_Graph.png" />
+    <Content Include="Linear Regression\Figures\Blood Pressure_ResidualGraph.png" />
+    <Content Include="Linear Regression\Figures\Blood Pressure_ResidualHistogram.png" />
+    <Content Include="Linear Regression\Figures\Body Mass Index_Blood Pressure_Distribution.png" />
+    <Content Include="Linear Regression\Figures\Body Mass Index_Blood Pressure_Graph.png" />
+    <Content Include="Linear Regression\Figures\Body Mass Index_Blood Pressure_ResidualGraph.png" />
+    <Content Include="Linear Regression\Figures\Body Mass Index_Blood Pressure_ResidualHistogram.png" />
+    <Content Include="Linear Regression\Figures\Body Mass Index_Distribution.png" />
+    <Content Include="Linear Regression\Figures\Body Mass Index_Graph.png" />
+    <Content Include="Linear Regression\Figures\Body Mass Index_ResidualGraph.png" />
+    <Content Include="Linear Regression\Figures\Body Mass Index_ResidualHistogram.png" />
+    <Content Include="Linear Regression\Figures\Body Mass Index_s3_Distribution.png" />
+    <Content Include="Linear Regression\Figures\Body Mass Index_s3_Graph.png" />
+    <Content Include="Linear Regression\Figures\Body Mass Index_s3_ResidualGraph.png" />
+    <Content Include="Linear Regression\Figures\Body Mass Index_s3_ResidualHistogram.png" />
+    <Content Include="Linear Regression\Figures\Body Mass Index_s5_Distribution.png" />
+    <Content Include="Linear Regression\Figures\Body Mass Index_s5_Graph.png" />
+    <Content Include="Linear Regression\Figures\Body Mass Index_s5_ResidualGraph.png" />
+    <Content Include="Linear Regression\Figures\Body Mass Index_s5_ResidualHistogram.png" />
+    <Content Include="Linear Regression\Figures\s1_Distribution.png" />
+    <Content Include="Linear Regression\Figures\s1_Graph.png" />
+    <Content Include="Linear Regression\Figures\s1_ResidualGraph.png" />
+    <Content Include="Linear Regression\Figures\s1_ResidualHistogram.png" />
+    <Content Include="Linear Regression\Figures\s2_Distribution.png" />
+    <Content Include="Linear Regression\Figures\s2_Graph.png" />
+    <Content Include="Linear Regression\Figures\s2_ResidualGraph.png" />
+    <Content Include="Linear Regression\Figures\s2_ResidualHistogram.png" />
+    <Content Include="Linear Regression\Figures\s3_Distribution.png" />
+    <Content Include="Linear Regression\Figures\s3_Graph.png" />
+    <Content Include="Linear Regression\Figures\s3_ResidualGraph.png" />
+    <Content Include="Linear Regression\Figures\s3_ResidualHistogram.png" />
+    <Content Include="Linear Regression\Figures\s4_Distribution.png" />
+    <Content Include="Linear Regression\Figures\s4_Graph.png" />
+    <Content Include="Linear Regression\Figures\s4_ResidualGraph.png" />
+    <Content Include="Linear Regression\Figures\s4_ResidualHistogram.png" />
+    <Content Include="Linear Regression\Figures\s5_Distribution.png" />
+    <Content Include="Linear Regression\Figures\s5_Graph.png" />
+    <Content Include="Linear Regression\Figures\s5_ResidualGraph.png" />
+    <Content Include="Linear Regression\Figures\s5_ResidualHistogram.png" />
+    <Content Include="Linear Regression\Figures\s6_Distribution.png" />
+    <Content Include="Linear Regression\Figures\s6_Graph.png" />
+    <Content Include="Linear Regression\Figures\s6_ResidualGraph.png" />
+    <Content Include="Linear Regression\Figures\s6_ResidualHistogram.png" />
+    <Content Include="Linear Regression\Figures\Sex_Distribution.png" />
+    <Content Include="Linear Regression\Figures\Sex_Graph.png" />
+    <Content Include="Linear Regression\Figures\Sex_ResidualGraph.png" />
+    <Content Include="Linear Regression\Figures\Sex_ResidualHistogram.png" />
+    <Content Include="Classification\Figures\Petal Lenght_Petal Width_k-neighrbors_Confusion matrix, normalized.png" />
+    <Content Include="Classification\Figures\Petal Lenght_Petal Width_k-neighrbors_Confusion matrix.png" />
+    <Content Include="Classification\Figures\Petal Lenght_Petal Width_mlPerceptron_Confusion matrix, normalized.png" />
+    <Content Include="Classification\Figures\Petal Lenght_Petal Width_mlPerceptron_Confusion matrix.png" />
+    <Content Include="Classification\Figures\Petal Lenght_Petal Width_Scatter.png" />
+    <Content Include="Classification\Figures\Petal Lenght_Petal Width_SVM_Confusion matrix, normalized.png" />
+    <Content Include="Classification\Figures\Petal Lenght_Petal Width_SVM_Confusion matrix.png" />
+    <Content Include="Classification\Figures\Sepal Lenght_Petal Lenght_k-neighrbors_Confusion matrix, normalized.png" />
+    <Content Include="Classification\Figures\Sepal Lenght_Petal Lenght_k-neighrbors_Confusion matrix.png" />
+    <Content Include="Classification\Figures\Sepal Lenght_Petal Lenght_mlPerceptron_Confusion matrix, normalized.png" />
+    <Content Include="Classification\Figures\Sepal Lenght_Petal Lenght_mlPerceptron_Confusion matrix.png" />
+    <Content Include="Classification\Figures\Sepal Lenght_Petal Lenght_Scatter.png" />
+    <Content Include="Classification\Figures\Sepal Lenght_Petal Lenght_SVM_Confusion matrix, normalized.png" />
+    <Content Include="Classification\Figures\Sepal Lenght_Petal Lenght_SVM_Confusion matrix.png" />
+    <Content Include="Classification\Figures\Sepal Lenght_Petal Width_k-neighrbors_Confusion matrix, normalized.png" />
+    <Content Include="Classification\Figures\Sepal Lenght_Petal Width_k-neighrbors_Confusion matrix.png" />
+    <Content Include="Classification\Figures\Sepal Lenght_Petal Width_mlPerceptron_Confusion matrix, normalized.png" />
+    <Content Include="Classification\Figures\Sepal Lenght_Petal Width_mlPerceptron_Confusion matrix.png" />
+    <Content Include="Classification\Figures\Sepal Lenght_Petal Width_Scatter.png" />
+    <Content Include="Classification\Figures\Sepal Lenght_Petal Width_SVM_Confusion matrix, normalized.png" />
+    <Content Include="Classification\Figures\Sepal Lenght_Petal Width_SVM_Confusion matrix.png" />
+    <Content Include="Classification\Figures\Sepal Lenght_Sepal Width_k-neighrbors_Confusion matrix, normalized.png" />
+    <Content Include="Classification\Figures\Sepal Lenght_Sepal Width_k-neighrbors_Confusion matrix.png" />
+    <Content Include="Classification\Figures\Sepal Lenght_Sepal Width_mlPerceptron_Confusion matrix, normalized.png" />
+    <Content Include="Classification\Figures\Sepal Lenght_Sepal Width_mlPerceptron_Confusion matrix.png" />
+    <Content Include="Classification\Figures\Sepal Lenght_Sepal Width_Scatter.png" />
+    <Content Include="Classification\Figures\Sepal Lenght_Sepal Width_SVM_Confusion matrix, normalized.png" />
+    <Content Include="Classification\Figures\Sepal Lenght_Sepal Width_SVM_Confusion matrix.png" />
+    <Content Include="Classification\Figures\Sepal Width_Petal Lenght_k-neighrbors_Confusion matrix, normalized.png" />
+    <Content Include="Classification\Figures\Sepal Width_Petal Lenght_k-neighrbors_Confusion matrix.png" />
+    <Content Include="Classification\Figures\Sepal Width_Petal Lenght_mlPerceptron_Confusion matrix, normalized.png" />
+    <Content Include="Classification\Figures\Sepal Width_Petal Lenght_mlPerceptron_Confusion matrix.png" />
+    <Content Include="Classification\Figures\Sepal Width_Petal Lenght_Scatter.png" />
+    <Content Include="Classification\Figures\Sepal Width_Petal Lenght_SVM_Confusion matrix, normalized.png" />
+    <Content Include="Classification\Figures\Sepal Width_Petal Lenght_SVM_Confusion matrix.png" />
+    <Content Include="Classification\Figures\Sepal Width_Petal Width_k-neighrbors_Confusion matrix, normalized.png" />
+    <Content Include="Classification\Figures\Sepal Width_Petal Width_k-neighrbors_Confusion matrix.png" />
+    <Content Include="Classification\Figures\Sepal Width_Petal Width_mlPerceptron_Confusion matrix, normalized.png" />
+    <Content Include="Classification\Figures\Sepal Width_Petal Width_mlPerceptron_Confusion matrix.png" />
+    <Content Include="Classification\Figures\Sepal Width_Petal Width_Scatter.png" />
+    <Content Include="Classification\Figures\Sepal Width_Petal Width_SVM_Confusion matrix, normalized.png" />
+    <Content Include="Classification\Figures\Sepal Width_Petal Width_SVM_Confusion matrix.png" />
+    <Content Include="Classification\output.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Linear Regression\Diabetes.py" />
+    <Compile Include="Classification\Flowers.py" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
